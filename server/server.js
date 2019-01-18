@@ -1,31 +1,30 @@
 //Initiallising node modules
-// var express = require("express");
-// var path = require("path");
-// var sql = require("mssql");
-// var tedious = require("tedious");
+
 var express = require('express');
 var cors = require('cors');
 var tediousExpress = require('express4-tedious');
 var tediousExpress = require('express4-tedious');
-var bodyParser = require("body-parser");
-// var time = new Date().getUTCDate;
+var bodyParser = require("body-parser");  
+var TYPES = require('tedious').TYPES;
+//  var Request = require('tedious').Request; 
 
 var app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+
+// Credentials for Azure database
 var config =
 {
-    userName: 'testserver',  
-    password: 'SoftwareDev2018',  
-    server: 'renomictest87.database.windows.net',  
-    options: {encrypt: true, database: 'AngularSql'} 
+    userName: '',  //fill in username
+    password: '',  //fill in password
+    server: '',      //fill in server url
+    options: {encrypt: true, database: ''} //fill in database name
 
 }
 
-//  var Request = require('tedious').Request;  
-    var TYPES = require('tedious').TYPES;  
+
 
 app.use(function (req, res, next) {
     req.sql = tediousExpress(config);
