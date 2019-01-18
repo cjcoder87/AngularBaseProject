@@ -1,0 +1,109 @@
+
+
+<!-- <mat-toolbar role="heading">
+  <span>Scenario Accelerator</span>
+
+  <span class="rightFace"></span>
+  <span ><i class="material-icons">settings</i></span>
+  <span ><i class="material-icons">person</i></span>
+  </mat-toolbar> -->
+
+  <section class="row">
+    <section class="col-12">
+        <app-navbar></app-navbar>
+
+    </section>
+  </section>
+
+  
+    <section class="row">
+      <section id="left-wall" class="col-1"></section>
+      <section class="col-11">
+        
+        <mat-card>
+
+    <h2 id="scenario">Scenarios</h2>
+
+    <h3 id="search">Search</h3>
+
+    <!-- Search Bar -->
+
+    <div class="searchContainer">
+        <input class="searchBox" name="search" matInput (keyup)="childcomponent.applyFilter($event.target.value)" placeholder="Search by Name or Owner">
+        <i id="searchicon" class="searchIcon material-icons">search</i>
+    
+      </div>
+
+<ng-container *ngIf="show">
+
+<form  id="addscenario" #scenario="ngForm" (ngSubmit)="onSubmit(scenario.value)">
+    
+    <!-- <form action="http://localhost:8080/api/scenarios" method="post"> -->
+
+  <h2>Scenario Entry</h2>
+  <div class="form-group"><label for="scenarioname">Scenario Name<input ngModel name="scenarioname" #scenarioname="ngModel" id="scenarioname" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenarioowner">Scenario Owner<input ngModel name="scenarioowner" id="scenarioowner" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenariodate">Scenario Date<input ngModel name="scenariodate" id="scenariodate" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenariversion">Scenario Version<input ngModel name="scenarioversion" id="scenariversion" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenariostatus">Scenario Status<input ngModel name="scenariostatus" id="scenariostatus" type="text" class="form-control" required></label></div>
+  
+  <button class="btn btn-primary">Save</button>
+
+</form>
+
+    <!-- <p>Scenario name value: {{ scenarioname.value }}</p>
+    <p>Scenario name valid: {{ scenarioname.valid }}</p>
+    <p>Form value: {{ scenario.value | json }}</p>
+    <p>Form valid: {{ scenario.valid }}</p> -->
+
+
+
+</ng-container>
+
+<ul id="actionbar">
+   <li>
+      <mat-icon (click)="toggle()" id="bt">add</mat-icon>
+      <span>New</span>
+  </li>
+  <li>
+ <mat-icon>edit</mat-icon>
+ <span>Edit</span>
+  </li>
+  <li>
+ <mat-icon>block</mat-icon>
+ <span>Inactive</span>
+
+
+    
+  </li>
+  <li>
+ <mat-icon>toll</mat-icon>
+ <span>Clone</span>
+  
+  </li>
+</ul>
+
+      
+
+<mat-tab-group>
+  <mat-tab label="In-Progress">
+
+    <app-data-table #childcomponent></app-data-table>
+    
+  </mat-tab>
+  <mat-tab label="Completed">
+      <app-data-table></app-data-table>
+      
+  </mat-tab>
+
+</mat-tab-group>
+
+</mat-card>
+
+</section>
+
+
+</section>
+
+
+<app-footer></app-footer>

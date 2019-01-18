@@ -1,0 +1,38 @@
+mat-toolbar#nav{
+    color: #106EBE;
+    background-color: white;
+    width: 100%;
+    box-shadow: black 0.1px 0.1px 16px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    margin-top: 1px;
+}
+
+#nav-items{
+    margin-top: 20px;
+    margin-left: 45px;
+    height: 100%;}
+
+#nav-items li{
+    display: inline-block;
+    color: #106EBE;
+    margin: 0 0 0 0px;
+    font-size: 15px;
+    font-weight: bold;
+    vertical-align: baseline;
+    margin-right: 30px;
+    height: 100%;
+    line-height: 4em;
+}
+
+#nav-items li.active{
+    border-bottom: solid 5px #106EBE;
+}
+
+#nav-items li:hover{
+    color: #106EBE;
+    cursor: pointer;
+    
+}

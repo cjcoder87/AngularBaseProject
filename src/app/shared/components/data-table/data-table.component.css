@@ -1,0 +1,207 @@
+  
+  /* Search Bar */
+  #search{
+    font-size: 15px;
+    
+}
+
+.searchContainer, #search{
+    margin-left: 15px;
+    color: black;
+}
+/* Search Bar */
+
+.searchContainer {
+    display: grid;
+    grid-template-columns:1.5rem 4fr 1fr;
+    width:300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    /* display: inline; */
+    top: 35px;
+    right: -410px;
+    z-index: 2000000;
+  
+  }
+
+  mat-tab-group #searchicon{
+    color:gray;
+    position: relative;
+    right: -255px;
+  }
+  
+  .searchContainer:focus-within i {
+    display: none;
+  }
+  
+  .searchContainer:focus-within .searchBox{
+    grid-column:1/4;
+  }
+  
+  .searchContainer:focus-within .searchBox::placeholder {
+    color:transparent;
+  }
+  
+  .searchIcon {
+    padding: 0.5rem;
+    grid-row:1;
+    grid-column:1/2;
+    z-index:2;
+    right: -270px;
+    position: absolute;
+    color:gray;
+  }
+  
+  .searchBox {
+    border: 0;
+    padding: 0.5rem;
+    grid-column:2/4;
+    grid-row:1;
+    outline:none;
+    color: black;
+  }/* Table */
+
+  #htmltable{
+    color: black;
+  }
+
+ 
+
+
+  table{
+    border-collapse: collapse;
+    background: white;
+    margin: 75px auto 0 auto;
+    width:95%;
+    
+  }
+
+
+/* td{
+  height: 45px;
+  border-right: black solid 1px;
+  text-align: center;
+}
+
+table th{
+  color: white;
+  background-color: #4D4C4C;
+  border-right: black solid 1px;
+  height: 50px;
+}
+
+table tr{
+  border-right: black solid 1px;
+color: black;
+font-size: 12px;
+font-family: sans-serif;
+} */
+
+  table .mat-cell{
+    font-size: 12px;
+  }
+  .mat-header-cell{
+    font-size: 14px;
+    color: black;
+
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  
+  #scentab{
+    margin-top: 75px;
+  }
+
+  table  i.material-icons{
+    font-size: 14px;
+    margin-left: 40px;
+  }
+
+  tr.mat-header-row{
+    border-bottom: solid lightgray 2px;
+    border-top: solid lightgray 2px;
+  }
+
+  table i.material-icons{
+
+    color:gray;
+    font-size: 14px;
+  }
+
+  .mat-elevation-z8{
+    box-shadow: none;
+  }
+
+  /* radio */
+
+  .mat-radio-button{
+    margin-top: 8px;
+    margin-right: 5px;
+  }
+
+  /* tr.mat-row:hover, .record_table tr:hover{
+  background-color: rgba(71, 186, 231, 0.575) !important; 
+  } */
+
+.highlight_row {
+  background-color: rgba(71, 186, 231, 0.575); 
+}
+
+  .checkmark{
+    position: relative;
+    left: -22px;
+    color: white;
+    font-size: 10px;
+  }
+
+  /* tr{transition: all ease-in-out .25s}
+  .selected{background-color: rgb(34, 143, 185) } */
+
+  /* Checkbox */
+
+  .round {
+    position: relative;
+  }
+  
+  .round label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: -4px;
+    width: 28px;
+  }
+  
+  .round label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 12px;
+  }
+  
+  .round input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .round input[type="checkbox"]:checked + label {
+    background-color: #106EBE;
+    border-color: #106EBE;
+  }
+  
+  .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
